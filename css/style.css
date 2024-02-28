@@ -1,0 +1,186 @@
+/*HEX-коды цветов с sdo-kst:
+#2f678b
+#3a454b
+#0099ff
+#f4f4f4
+#ffffff
+*/
+body{
+    background-color: #FFFFFF;
+    text-align: center;
+}
+.logo{
+
+    width: 21%;
+    height: 18%;
+    margin: 0 auto;
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+/* 1. Блок с элементами авторизации*/
+.authorization_Div{
+    width: 680px;
+    height: fit-content;
+    border-radius: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*Центрируент содержание div блока по центру этого блока*/
+    margin: auto; /*Центрируент div блок по центру страницы (можно убрать при необходимости)*/
+    grid-gap: 30px; /*Задает расстояние между элементами блока*/
+    padding: 40px; /*Внутренний отступ элементов от границ блока*/
+    background-color: #e8e8e8;
+    /*border: 1px solid rgb(218, 59, 59); Обозначение границ блока (можно закомментрировать при необходимости)*/
+}
+.auth_Label { 
+    font-size: 36px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 7px;
+    font-family: sans-serif;
+}
+.authSmall_Label{
+    display: flex;
+    margin-left: 2%;
+    font-size: 19px;
+    font-weight: 550;
+    font-family: sans-serif;
+}
+.auth_Input{
+    height: 50px;
+    font-size: 36px;
+    border: 3px solid #e8e8e8;
+    border-radius: 15px;
+}
+.auth_Input:hover{
+    border: 3px solid #d9d9d9;
+}
+.auth_Input:focus{
+    outline: 0;
+    border: 3px solid #9b9b9b;
+}
+.auth_Btn{
+    width: 220px;
+    height: 70px;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #00536a;
+    color: #FFFFFF;
+    border: 0px;
+    border-radius: 15px;
+}
+.auth_Btn:hover{
+    background-color: #024457;
+    color: #FFFFFF;
+    border: 0px;
+    cursor: pointer;
+}
+/*Глазик у поля ввода пароля*/
+#togglePassword{
+    width: 48px;
+    height: 42px;
+    font-size: 36px;
+    text-align: center;
+    margin-top: 5px;
+    margin-left: -50px;
+    position: absolute;
+    cursor: pointer;
+    /* background-color: #FFFFFF; Заливка фона не позволяет символам показываться под глазиком */
+    border: 20px;
+}
+
+/* 2. Раздел (заготовка)*/
+
+.error-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 8px;
+    z-index: 9999;
+    animation: fadeOut 5s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+       opacity: 1;
+    }
+    100% {
+       opacity: 0;
+       display: none;
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 1024px){
+    .logo{
+        padding-top: 450px;
+        width: 35%;
+        height: 30%;
+        margin: 0 auto;
+    }
+    .logo img{
+        width: 100%;
+        height: 100%;
+    }
+    .authorization_Div{
+        width: 70%;
+        height: fit-content;
+        border-radius: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /*Центрируент содержание div блока по центру этого блока*/
+        margin: auto; /*Центрируент div блок по центру страницы (можно убрать при необходимости)*/
+        grid-gap: 50px; /*Задает расстояние между элементами блока*/
+        padding: 30px; /*Внутренний отступ элементов от границ блока*/
+        background-color: #e8e8e8;
+        /*border: 1px solid rgb(218, 59, 59); Обозначение границ блока (можно закомментрировать при необходимости)*/
+    }
+    .auth_Label { 
+        font-size: 42px;
+        font-weight: bold;
+        text-decoration: underline;
+        text-underline-offset: 7px;
+        font-family: sans-serif;
+    }
+    .authSmall_Label{
+        display: flex;
+        margin-left: 2%;
+        font-size: 26px;
+        font-weight: 550;
+        font-family: sans-serif;
+    }
+    .auth_Input{
+        height: 60px;
+        font-size: 42px;
+        border: 3px solid #e8e8e8;
+        border-radius: 15px;
+    }
+    .auth_Input:hover{
+        border: 3px solid #d9d9d9;
+    }
+    .auth_Input:focus{
+        outline: 0;
+        border: 3px solid #9b9b9b;
+    }
+    .auth_Btn{
+        width: 250px;
+        height: 80px;
+        font-size: 36px;
+        font-weight: bold;
+        background-color: #00536a;
+        color: #FFFFFF;
+        border: 0px;
+        border-radius: 15px;
+    }
+    .auth_Btn:hover{
+        background-color: #FFFFFF;
+        color: #00536a;
+        border: 3px solid #00536a;
+    }
+}
